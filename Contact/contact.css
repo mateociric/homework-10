@@ -1,0 +1,101 @@
+.alert {
+  color: #ff0000;
+}
+
+body {
+  background-color: #f6d655;
+}
+
+.header {
+  width: 100%;
+  line-height: 10rem;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 5rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+  background-color: #bd302c;
+  filter: drop-shadow(0px 0.8rem 0.8rem rgba(0, 0, 0, 0.4784313725));
+}
+
+.contact-form {
+  width: 50%;
+  margin: 5rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contact-form div {
+  display: flex;
+  flex-direction: column;
+}
+.contact-form div label {
+  line-height: 5rem;
+  font-size: 3rem;
+  font-weight: 700;
+}
+.contact-form div input:not(:last-child) {
+  width: 40rem;
+  border: none;
+  border-radius: 0.5rem;
+  padding-left: 1rem;
+  line-height: 5rem;
+  color: #979797;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  filter: drop-shadow(0px 0.4rem 0.4rem rgba(0, 0, 0, 0.2941176471));
+  outline: none;
+}
+.contact-form div input:not(:last-child):hover {
+  filter: drop-shadow(0px 0.2rem 0.2rem rgba(0, 0, 0, 0.2941176471));
+  cursor: pointer;
+}
+.contact-form div .alert {
+  height: 3rem;
+}
+.contact-form div textarea {
+  width: 40rem;
+  border: none;
+  border-radius: 0.5rem;
+  padding-left: 1rem;
+  line-height: 5rem;
+  color: #979797;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  filter: drop-shadow(0px 0.4rem 0.4rem rgba(0, 0, 0, 0.2941176471));
+  outline: none;
+  height: 20rem;
+  resize: none;
+}
+.contact-form div textarea:hover {
+  filter: drop-shadow(0px 0.2rem 0.2rem rgba(0, 0, 0, 0.2941176471));
+  cursor: pointer;
+}
+.contact-form div:last-of-type {
+  display: flex;
+  flex-direction: row;
+}
+.contact-form div:last-of-type .check-box {
+  width: 2rem;
+  margin-left: 6rem;
+}
+.contact-form button {
+  width: 40rem;
+  margin-top: 2rem;
+  border: none;
+  border-radius: 0.5rem;
+  line-height: 5rem;
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2.5rem;
+  font-weight: 500;
+  background-color: #bd302c;
+  filter: drop-shadow(0px 0.4rem 0.4rem rgba(0, 0, 0, 0.2941176471));
+  outline: none;
+}
+.contact-form button:hover {
+  filter: drop-shadow(0px 0.2rem 0.2rem rgba(0, 0, 0, 0.2941176471));
+  cursor: pointer;
+}

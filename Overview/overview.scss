@@ -1,0 +1,38 @@
+@import '../main.scss';
+
+body {
+    background-color: $bg-color;
+}
+
+.header {
+    @include header;
+}
+
+.main {
+    width: 25%;
+    margin: 5rem auto;
+    @include flex-column;
+    align-items: left;
+
+    & div {
+        margin-top: 4rem;
+
+        & h1 {
+            font-size: $fsize-h1;
+        }
+
+        & p {
+            line-height: 5rem;
+            font-size: $fsize-p;
+        }
+    }
+
+    & button {
+        @include button;
+
+        &:hover {
+            @include hoverInputBtn;
+        }
+    }
+
+}

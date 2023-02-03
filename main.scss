@@ -1,0 +1,78 @@
+$bg-color: #f6d655;
+$header-color: #bd302c;
+$btn-color: #bd302c;
+
+$font-type-header: 'Times New Roman', Times, serif;
+$font-type-label: 'Times New Roman', Times, serif;
+$font-type-input: Arial, Helvetica, sans-serif;
+$font-type-btn: Arial, Helvetica, sans-serif;
+$fsize-header: 5rem;
+$fsize-label: 3rem;
+$fsize-h1: 3rem;
+$fsize-p: 2rem;
+$fsize-input: 2rem;
+$fcolor-header: #ffffff;
+$fcolor-btn: #ffffff;
+$fcolor-input: #979797;
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin header {
+    width: 100%;
+
+    line-height: 10rem;
+    font-family: $font-type-header;
+    font-size: $fsize-header;
+    font-weight: 700;
+    color: $fcolor-header;
+    text-align: center;
+    background-color: $header-color;
+    filter: drop-shadow(0px .8rem .8rem #0000007a);
+}
+
+@mixin label {
+    line-height: 5rem;
+    font-size: $fsize-label;
+    font-weight: 700;
+}
+
+@mixin input {
+    width: 40rem;
+    border: none;
+    border-radius: .5rem;
+    padding-left: 1rem;
+    line-height: 5rem;
+    color: $fcolor-input;
+    font-family: $font-type-input;
+    font-size: $fsize-input;
+    font-weight: 700;
+    filter: drop-shadow(0px .4rem .4rem #0000004b);
+    outline: none;
+}
+
+@mixin button {
+    width: 40rem;
+    margin-top: 2rem;
+    border: none;
+    border-radius: .5rem;
+    line-height: 5rem;
+    color: $fcolor-btn;
+    font-family: $font-type-btn;
+    font-size: 2.5rem;
+    font-weight: 500;
+    background-color: $btn-color;
+    filter: drop-shadow(0px .4rem .4rem #0000004b);
+    outline: none;
+}
+
+@mixin hoverInputBtn {
+    filter: drop-shadow(0px .2rem .2rem #0000004b);
+    cursor: pointer;
+}
+
+.alert {
+    color: #ff0000;
+}

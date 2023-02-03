@@ -1,0 +1,67 @@
+@import '../main.scss';
+
+body {
+    background-color: $bg-color;
+}
+
+.header {
+    @include header;
+}
+
+.contact-form {
+    width: 50%;
+    margin: 5rem auto;
+    @include flex-column;
+    align-items: center;
+
+    & div {
+        @include flex-column;
+
+        & label {
+            @include label;
+        }
+
+        & input:not(:last-child) {
+            @include input;
+
+            &:hover {
+                @include hoverInputBtn;
+            }
+        }
+
+        & .alert {
+            height: 3rem;
+        }
+
+        & textarea {
+            @include input;
+            height: 20rem;
+            resize: none;
+
+            &:hover {
+                filter: drop-shadow(0px .2rem .2rem #0000004b);
+                cursor: pointer;
+            }
+        }
+
+        &:last-of-type {
+            display: flex;
+            flex-direction: row;
+
+            & .check-box {
+                width: 2rem;
+                margin-left: 6rem;
+            }
+        }
+
+    }
+
+    & button {
+        @include button;
+
+        &:hover {
+            @include hoverInputBtn;
+        }
+    }
+
+}
