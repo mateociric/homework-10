@@ -23,6 +23,6 @@ emptyFields.forEach( (el, index) => {
 });
 
 overviewBtn.addEventListener('click', () => {
-    localStorage.clear();
+    //localStorage.clear();
     window.location.assign(`${location}//Contact/contact.html`);
 });

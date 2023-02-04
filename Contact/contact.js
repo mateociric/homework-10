@@ -2,6 +2,7 @@ import USER_DETAILS from "../USER_DETAILS.js";
 import getAllInput from "./add-on/input-collection.js";
 import pattern from "./add-on/pattern-checking.js";
 import { location } from "../location.js";
+import contactGuard from "./add-on/contact-guard.js";
 
 let loginForm = document.getElementById('loginForm');
 let loginName = document.getElementById('loginName');
@@ -11,6 +12,8 @@ let loginTextArea = document.getElementById('loginTextArea');
 let loginSubscribe = document.getElementById('loginSubscribe');
 let btnSubmit = document.getElementById('btnSubmit');
 let errors = 0;
+
+contactGuard(USER_DETAILS, location);
 
 btnSubmit.addEventListener('click', () => {
 
