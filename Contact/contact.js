@@ -1,7 +1,7 @@
 import USER_DETAIL from "../user-detail.js";
 import getAllInput from "./add-on/input-collection.js";
 import pattern from "./add-on/pattern-checking.js";
-import { location } from "../location.js";
+//import { window.location.origin } from "../window.location.origin.js";
 import contactGuard from "./add-on/contact-guard.js";
 
 let loginForm = document.getElementById('loginForm');
@@ -13,7 +13,7 @@ let loginSubscribe = document.getElementById('loginSubscribe');
 let btnSubmit = document.getElementById('btnSubmit');
 let errors = 0;
 
-contactGuard(USER_DETAIL, location);
+contactGuard(USER_DETAIL, window.location.origin);
 
 btnSubmit.addEventListener('click', () => {
 
@@ -47,7 +47,7 @@ loginForm.addEventListener('submit', (e) => {
     e.preventDefault();
     if (errors === 0) {
         localStorage.setItem('user', JSON.stringify(USER_DETAIL));
-        window.location.assign(`${location}//Overview/overview.html`);
+        window.location.assign(`${window.location.origin}//Overview/overview.html`);
     } else
         localStorage.clear();
 });

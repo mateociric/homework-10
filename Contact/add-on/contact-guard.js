@@ -1,4 +1,4 @@
-function contactGuard(userObj, loc) {
+function contactGuard(userObj, locat) {
     if (localStorage.getItem('user')) {
         let trueArr = Object.keys(userObj);
         let checkingArr = Object.entries(JSON.parse(localStorage.getItem('user')));
@@ -13,7 +13,7 @@ function contactGuard(userObj, loc) {
                 }
             });
             if (!numOfErrors) {
-                window.location.assign(`${loc}//Overview/overview.html`);
+                window.location.assign(`${locat}//Overview/overview.html`);
             }
         }
     }

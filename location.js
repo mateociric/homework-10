@@ -1,1 +1,0 @@
-export let location = window.location.origin;

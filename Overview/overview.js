@@ -1,5 +1,3 @@
-import { location } from "../location.js";
-
 let overviewName = document.getElementById('overviewName');
 let overviewSurname = document.getElementById('overviewSurname');
 let overviewEmail = document.getElementById('overviewEmail');
@@ -12,7 +10,7 @@ let emptyFields = [overviewName, overviewSurname,  overviewEmail, overviewDetail
 function overviewGuard() {
     let isExist = localStorage.getItem('user');
     if(!isExist) {
-        window.location.assign(`${location}//Contact/contact.html`);
+        window.location.assign(`${window.location.origin}//Contact/contact.html`);
     }
 }
 
@@ -24,5 +22,5 @@ emptyFields.forEach( (el, index) => {
 
 overviewBtn.addEventListener('click', () => {
     localStorage.clear();
-    window.location.assign(`${location}//Contact/contact.html`);
+    window.location.assign(`${window.location.origin}//Contact/contact.html`);
 });
