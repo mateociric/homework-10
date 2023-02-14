@@ -1,5 +1,5 @@
 function getAllInput(el) {
-    if (el.children.length === 0) {
+    if (!el.children.length) {
         return [el];
     }
     let inputArr = [];

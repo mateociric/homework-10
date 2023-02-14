@@ -22,7 +22,7 @@ loginForm.addEventListener('submit', (e) => {
         const keyInPattern = el.getAttribute('id');
 
         for (const prop in pattern[keyInPattern]) {
-            console.log(pattern[keyInPattern][prop](el))
+            pattern[keyInPattern][prop](el)
         }
     });
 

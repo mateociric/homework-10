@@ -24,7 +24,7 @@ const pattern = {
 
 function checkLenght(input) {
     input.nextElementSibling.textContent = '';
-    if (input.value.trim().length === 0) {
+    if (!input.value.trim().length) {
         input.nextElementSibling.textContent = 'Invalid input!';
     }
 }
