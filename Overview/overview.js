@@ -1,14 +1,14 @@
-let overviewName = document.getElementById('overviewName');
-let overviewSurname = document.getElementById('overviewSurname');
-let overviewEmail = document.getElementById('overviewEmail');
-let overviewDetails = document.getElementById('overviewDetails');
-let overviewSubscribe = document.getElementById('overviewSubscribe');
-let overviewBtn = document.getElementById('overviewBtn');
-let lStorageData = localStorage.getItem('user')
-let emptyFields = [overviewName, overviewSurname,  overviewEmail, overviewDetails, overviewSubscribe];
+const overviewName = document.getElementById('overviewName');
+const overviewSurname = document.getElementById('overviewSurname');
+const overviewEmail = document.getElementById('overviewEmail');
+const overviewDetails = document.getElementById('overviewDetails');
+const overviewSubscribe = document.getElementById('overviewSubscribe');
+const overviewBtn = document.getElementById('overviewBtn');
+const lStorageData = localStorage.getItem('user')
+const emptyFields = [overviewName, overviewSurname,  overviewEmail, overviewDetails, overviewSubscribe];
 
 function overviewGuard() {
-    let isExist = localStorage.getItem('user');
+    const isExist = localStorage.getItem('user');
     if(!isExist) {
         window.location.assign(`${window.location.origin}/contact/contact.html`);
     }

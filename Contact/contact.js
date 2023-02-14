@@ -1,27 +1,27 @@
 import USER_DETAIL from "../user-detail.js";
-import getAllInput from "./add-on/input-collection.js";
-import pattern from "./add-on/pattern-checking.js";
-import contactGuard from "./add-on/contact-guard.js";
+import getAllInput from "./utility/input-collection.js";
+import pattern from "./utility/pattern-checking.js";
+import contactGuard from "./utility/contact-guard.js";
 
-let loginForm = document.getElementById('loginForm');
-let loginName = document.getElementById('loginName');
-let loginSurname = document.getElementById('loginSurname');
-let loginEmail = document.getElementById('loginEmail');
-let loginTextArea = document.getElementById('loginTextArea');
-let loginSubscribe = document.getElementById('loginSubscribe');
+const loginForm = document.getElementById('loginForm');
+const loginName = document.getElementById('loginName');
+const loginSurname = document.getElementById('loginSurname');
+const loginEmail = document.getElementById('loginEmail');
+const loginTextArea = document.getElementById('loginTextArea');
+const loginSubscribe = document.getElementById('loginSubscribe');
 
 contactGuard(USER_DETAIL, window.location.origin);
 
 loginForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    
+
     let errors = 0;
     let arrInput = getAllInput(loginForm);
 
     arrInput.forEach((el) => {
-        let keyInPattern = el.getAttribute('id');
+        const keyInPattern = el.getAttribute('id');
 
-        for (let prop in pattern[keyInPattern]) {
+        for (const prop in pattern[keyInPattern]) {
             console.log(pattern[keyInPattern][prop](el))
         }
     });
