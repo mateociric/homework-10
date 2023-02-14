@@ -1,12 +1,20 @@
-.alert {
-  color: #ff0000;
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 body {
   background-color: #f6d655;
 }
 
-.header {
+header {
   width: 100%;
   line-height: 10rem;
   font-family: "Times New Roman", Times, serif;
@@ -18,23 +26,13 @@ body {
   filter: drop-shadow(0px 0.8rem 0.8rem rgba(0, 0, 0, 0.4784313725));
 }
 
-.contact-form {
-  width: 50%;
-  margin: 5rem auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.contact-form div {
-  display: flex;
-  flex-direction: column;
-}
-.contact-form div label {
+label {
   line-height: 5rem;
   font-size: 3rem;
   font-weight: 700;
 }
-.contact-form div input:not(:last-child) {
+
+input {
   width: 40rem;
   border: none;
   border-radius: 0.5rem;
@@ -47,14 +45,38 @@ body {
   filter: drop-shadow(0px 0.4rem 0.4rem rgba(0, 0, 0, 0.2941176471));
   outline: none;
 }
-.contact-form div input:not(:last-child):hover {
+
+button {
+  width: 40rem;
+  margin-top: 2rem;
+  border: none;
+  border-radius: 0.5rem;
+  line-height: 5rem;
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2.5rem;
+  font-weight: 500;
+  background-color: #bd302c;
+  filter: drop-shadow(0px 0.4rem 0.4rem rgba(0, 0, 0, 0.2941176471));
+  outline: none;
+}
+button:hover {
   filter: drop-shadow(0px 0.2rem 0.2rem rgba(0, 0, 0, 0.2941176471));
   cursor: pointer;
 }
-.contact-form div .alert {
-  height: 3rem;
+
+.contact-form {
+  width: 50%;
+  margin: 5rem auto;
+  align-items: center;
 }
-.contact-form div textarea {
+
+.alert-label {
+  height: 3rem;
+  color: red;
+}
+
+textarea {
   width: 40rem;
   border: none;
   border-radius: 0.5rem;
@@ -69,33 +91,15 @@ body {
   height: 20rem;
   resize: none;
 }
-.contact-form div textarea:hover {
+textarea:hover {
   filter: drop-shadow(0px 0.2rem 0.2rem rgba(0, 0, 0, 0.2941176471));
   cursor: pointer;
 }
-.contact-form div:last-of-type {
-  display: flex;
-  flex-direction: row;
+
+.check-box {
+  margin-left: 4rem;
+  width: 5rem;
+  height: 2rem;
 }
-.contact-form div:last-of-type .check-box {
-  width: 2rem;
-  margin-left: 6rem;
-}
-.contact-form button {
-  width: 40rem;
-  margin-top: 2rem;
-  border: none;
-  border-radius: 0.5rem;
-  line-height: 5rem;
-  color: #ffffff;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 2.5rem;
-  font-weight: 500;
-  background-color: #bd302c;
-  filter: drop-shadow(0px 0.4rem 0.4rem rgba(0, 0, 0, 0.2941176471));
-  outline: none;
-}
-.contact-form button:hover {
-  filter: drop-shadow(0px 0.2rem 0.2rem rgba(0, 0, 0, 0.2941176471));
-  cursor: pointer;
-}
+
+/*# sourceMappingURL=contact.css.map */

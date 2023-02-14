@@ -1,7 +1,6 @@
 import USER_DETAIL from "../user-detail.js";
 import getAllInput from "./add-on/input-collection.js";
 import pattern from "./add-on/pattern-checking.js";
-//import { window.location.origin } from "../window.location.origin.js";
 import contactGuard from "./add-on/contact-guard.js";
 
 let loginForm = document.getElementById('loginForm');

@@ -1,67 +1,29 @@
-@import '../main.scss';
-
-body {
-    background-color: $bg-color;
-}
-
-.header {
-    @include header;
-}
+@import '../style/main.scss';
 
 .contact-form {
     width: 50%;
     margin: 5rem auto;
-    @include flex-column;
     align-items: center;
+}
 
-    & div {
-        @include flex-column;
+.alert-label {
+    height: 3rem;
+    color: red;
+}
 
-        & label {
-            @include label;
-        }
+textarea {
+    @include textarea;
+    height: 20rem;
+    resize: none;
 
-        & input:not(:last-child) {
-            @include input;
-
-            &:hover {
-                @include hoverInputBtn;
-            }
-        }
-
-        & .alert {
-            height: 3rem;
-        }
-
-        & textarea {
-            @include input;
-            height: 20rem;
-            resize: none;
-
-            &:hover {
-                filter: drop-shadow(0px .2rem .2rem #0000004b);
-                cursor: pointer;
-            }
-        }
-
-        &:last-of-type {
-            display: flex;
-            flex-direction: row;
-
-            & .check-box {
-                width: 2rem;
-                margin-left: 6rem;
-            }
-        }
-
+    &:hover {
+        filter: drop-shadow(0px .2rem .2rem #0000004b);
+        cursor: pointer;
     }
+}
 
-    & button {
-        @include button;
-
-        &:hover {
-            @include hoverInputBtn;
-        }
-    }
-
+.check-box {
+    margin-left: 4rem;
+    width: 5rem;
+    height: 2rem;
 }
