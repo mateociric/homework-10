@@ -9,8 +9,11 @@ const loginSurname = document.getElementById('loginSurname');
 const loginEmail = document.getElementById('loginEmail');
 const loginTextArea = document.getElementById('loginTextArea');
 const loginSubscribe = document.getElementById('loginSubscribe');
+const USER_DETAIL_COPY = {};
 
-contactGuard(USER_DETAIL, window.location.origin);
+Object.assign(USER_DETAIL_COPY, USER_DETAIL);
+
+contactGuard(USER_DETAIL_COPY, window.location.origin);
 
 loginForm.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -31,14 +34,14 @@ loginForm.addEventListener('submit', (e) => {
         el.nextElementSibling.innerHTML ? errors++ : errors
     });
 
-    USER_DETAIL.NAME = loginName.value;
-    USER_DETAIL.SURNAME = loginSurname.value;
-    USER_DETAIL.EMAIL = loginEmail.value;
-    USER_DETAIL.DETAILS = loginTextArea.value;
-    USER_DETAIL.SUBSCRIBE = loginSubscribe.checked ? 'I want subscribe' : 'I do not want to subscribe';
+    USER_DETAIL_COPY.NAME = loginName.value;
+    USER_DETAIL_COPY.SURNAME = loginSurname.value;
+    USER_DETAIL_COPY.EMAIL = loginEmail.value;
+    USER_DETAIL_COPY.DETAILS = loginTextArea.value;
+    USER_DETAIL_COPY.SUBSCRIBE = loginSubscribe.checked ? 'I want subscribe' : 'I do not want to subscribe';
 
     if (errors === 0) {
-        localStorage.setItem('user', JSON.stringify(USER_DETAIL));
+        localStorage.setItem('user', JSON.stringify(USER_DETAIL_COPY));
         window.location.assign(`${window.location.origin}/overview/overview.html`);
     } else
         localStorage.clear();
