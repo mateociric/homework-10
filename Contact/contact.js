@@ -46,7 +46,7 @@ loginForm.addEventListener('submit', (e) => {
     e.preventDefault();
     if (errors === 0) {
         localStorage.setItem('user', JSON.stringify(USER_DETAIL));
-        window.location.assign(`${window.location.origin}//Overview/overview.html`);
+        window.location.assign(`${window.location.origin}/overview/overview.html`);
     } else
         localStorage.clear();
 });

@@ -10,7 +10,7 @@ let emptyFields = [overviewName, overviewSurname,  overviewEmail, overviewDetail
 function overviewGuard() {
     let isExist = localStorage.getItem('user');
     if(!isExist) {
-        window.location.assign(`${window.location.origin}//Contact/contact.html`);
+        window.location.assign(`${window.location.origin}/contact/contact.html`);
     }
 }
 
@@ -22,5 +22,5 @@ emptyFields.forEach( (el, index) => {
 
 overviewBtn.addEventListener('click', () => {
     localStorage.clear();
-    window.location.assign(`${window.location.origin}//Contact/contact.html`);
+    window.location.assign(`${window.location.origin}/contact/contact.html`);
 });

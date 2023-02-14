@@ -13,7 +13,7 @@ function contactGuard(userObj, locat) {
                 }
             });
             if (!numOfErrors) {
-                window.location.assign(`${locat}//Overview/overview.html`);
+                window.location.assign(`${locat}/overview/overview.html`);
             }
         }
     }
