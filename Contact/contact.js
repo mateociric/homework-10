@@ -31,13 +31,11 @@ loginForm.addEventListener('submit', (e) => {
         el.nextElementSibling.innerHTML ? errors++ : errors
     });
 
-    console.log(errors);
-
     USER_DETAIL.NAME = loginName.value;
     USER_DETAIL.SURNAME = loginSurname.value;
     USER_DETAIL.EMAIL = loginEmail.value;
     USER_DETAIL.DETAILS = loginTextArea.value;
-    loginSubscribe.checked ? USER_DETAIL.SUBSCRIBE = 'I want subscribe' : USER_DETAIL.SUBSCRIBE = 'I do not want to subscribe'
+    USER_DETAIL.SUBSCRIBE = loginSubscribe.checked ? 'I want subscribe' : 'I do not want to subscribe';
 
     if (errors === 0) {
         localStorage.setItem('user', JSON.stringify(USER_DETAIL));
